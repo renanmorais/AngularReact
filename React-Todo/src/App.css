@@ -1,0 +1,19 @@
+.app {
+  padding: 30px;
+  background-color: #ffffff;
+}
+
+.cardDone {
+  background-color: #86868647;
+}
+
+.todo {
+  align-items: center;
+  display: flex;
+  font-size: 18px;
+  justify-content: space-between;
+}
+
+.buttonDone{
+
+}
