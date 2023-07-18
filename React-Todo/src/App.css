@@ -1,6 +1,6 @@
+
 .app {
   padding: 30px;
-  background-color: #ffffff;
 }
 
 .cardDone {
@@ -16,4 +16,7 @@
 
 .buttonDone{
 
+}
+.card-index{
+  box-shadow: #2196F3;
 }
