@@ -1,0 +1,28 @@
+<app-header></app-header>
+<div class="ui container">
+  <app-card>
+    <h1 style="padding-top: 2rem; text-align: center;">Angular Todo List</h1>
+    <div class="ui form">
+      <div class="ui field">
+        <input type="text" autofocus [(ngModel)]="desc" name="desc" (keyup.enter)="saveTask()" autocomplete="off" placeholder="digite aqui">
+        <button class="ui inverted blue button" (click)="saveTask()">Submit</button>
+      </div>
+      <div *ngFor="let data of data.item" class="ui centered card" style="width: 100%;">
+        <div class="content" *ngIf="data.status === 0">
+          <span class="ui left floated">{{data.description}}</span>
+          <span class="ui right floated">
+                    <button class="ui inverted blue button" (click)="doneTask(data.id)">Done</button>
+                    <button class="ui inverted red button" (click)="deleteTask(data.id)">Delete</button>
+                </span>
+        </div>
+        <div class="content" *ngIf="data.status === 1" style="background-color: rgba(134, 134, 134, 0.1);">
+          <span class="ui left floated">{{data.description}}</span>
+          <span class="ui right floated">
+                    <button class="ui disabled button">Done</button>
+                    <button class="ui inverted red button" (click)="deleteTask(data.id)">Delete</button>
+                </span>
+        </div>
+      </div>
+    </div>
+  </app-card>
+</div>
